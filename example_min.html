@@ -43,6 +43,11 @@
       color: white;
       font-size: large;
     }
+
+    /* Стиль для пустой полосы между кнопок */
+    .player-blank-space {
+      flex-grow: 1;
+    }
   </style>
 </head>
 <body>
@@ -65,6 +70,12 @@
 
       <button class="js-volume-button player-btn" hidden>
         <i class="fa fa-volume-off player-icon" aria-hidden="true"></i>
+      </button>
+
+      <div class="player-blank-space"></div>
+
+      <button class="js-fullscreen-button player-btn">
+        <i class="fa fa-expand player-icon" aria-hidden="true"></i>
       </button>
     </div>
   </div>
