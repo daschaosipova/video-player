@@ -44,6 +44,7 @@ cd video-player
 
 
 ## Скриншот сайта
+<img width="1446" height="952" alt="image" src="https://github.com/user-attachments/assets/d3b042fe-95e6-4641-a770-a2753a0d4668" />
 
 ## Цели проекта
 
