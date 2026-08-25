@@ -35,7 +35,7 @@
       background-color: black;
       display: flex;
       align-items: center;
-      gap: 3px;
+      gap: 2px;
       padding-bottom: 4px;
     }
 
@@ -47,6 +47,7 @@
       outline: none;
       width: 35px;
       height: 35px;
+      padding-bottom: 0px
     }
 
     /* Стиль для иконок внутри кнопок */
@@ -62,9 +63,48 @@
       font-weight: 400;
     }
 
-    /* Стиль для пустой полосы между кнопок */
-    .player-blank-space {
+    /* Стиль для контейнера прогрессбара видео-плеера */
+    .player-progress-bar {
       flex-grow: 1;
+      margin-left: 7px;
+      margin-right: 7px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    
+    /* Вся дорожка (серая подложка, фиксированная на 100% ширины контейнера) */
+   .player-progress-fixed {
+      background-color: black; 
+      height: 5px;
+      border-radius: 30px;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Стиль для полоски прогрессбара видео-плеера */
+    .player-progress-slider {
+      background-color: red;
+      height: 100%;
+      border-radius: 30px;
+      position: relative;
+    }
+
+    /* Бегунок (точка) */
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: red;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-sizing: border-box;
+      display: inline-block;
+      flex-grow: 0;
+      position: absolute;
+      right: -7.5px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   </style>
 </head>
@@ -92,7 +132,13 @@
 
       <span class="js-current-time player-text"></span>
 
-      <div class="player-blank-space"></div>
+      <div class="js-progress player-progress-bar">
+        <div class="player-progress-fixed">
+          <div class="js-progress-slider player-progress-slider">
+            <span class="dot"></span>
+          </div>
+        </div> 
+      </div>
 
       <span class="js-duration player-text"></span>
 
