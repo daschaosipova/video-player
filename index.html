@@ -9,6 +9,10 @@
   <link rel="icon" type="image/png" href="static/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <style>
     /* Стиль для главного контейнера плеера */
     .player-main-wrapper {
@@ -51,6 +55,13 @@
       font-size: large;
     }
 
+    /* Стиль для текста внутри кнопок */
+    .player-text {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
     /* Стиль для пустой полосы между кнопок */
     .player-blank-space {
       flex-grow: 1;
@@ -79,7 +90,11 @@
         <i class="fa fa-volume-off player-icon" aria-hidden="true"></i>
       </button>
 
+      <span class="js-current-time player-text"></span>
+
       <div class="player-blank-space"></div>
+
+      <span class="js-duration player-text"></span>
 
       <button class="js-fullscreen-button player-btn">
         <i class="fa fa-expand player-icon" aria-hidden="true"></i>
