@@ -12,9 +12,13 @@
 
 ## Структура репозитория
 
-- `index.html` — главная страница плеера с HTML-разметкой и стилями.
-- `player.js` — JavaScript-логика инициализации плеера и привязки событий к кнопкам.
-- `font-awesome/` — локальные файлы шрифтов и стилей для отображения иконок управления (Play, Pause, Mute, Fullscreen).
+```text
+├── index.html          # Главная страница плеера с HTML-разметкой и стилями
+└── static/             # Папка со статическими файлами проекта
+    ├── favicon/        # Иконки сайта для вкладок браузера
+    ├── font-awesome/   # Локальные шрифты и стили для иконок управления
+    └── js/             # Скрипты инициализации и логики плеера
+```
 
 ## Стек технологий
 
@@ -44,7 +48,7 @@ cd video-player
 
 
 ## Скриншот сайта
-<img width="1446" height="952" alt="image" src="https://github.com/user-attachments/assets/d3b042fe-95e6-4641-a770-a2753a0d4668" />
+<img width="907" height="685" alt="image" src="https://github.com/user-attachments/assets/1e140ad9-da8a-43cc-afb3-25c837988ee2" />
 
 ## Цели проекта
 
