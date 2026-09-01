@@ -1,0 +1,110 @@
+/* Отступ от края браузера, как на макете дизайнера */
+body {
+  margin: 8px;
+}
+
+/* Стиль для главного контейнера плеера */
+.player-main-wrapper {
+  width: 800px;
+  height: 600px;
+  box-shadow: 0 0 25px black;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+/* Стиль для видео внутри плеера */
+.player-video-box {
+  flex-grow: 1;
+  margin-bottom: 3px;
+}
+
+/* Стиль для нижней панели управления */
+.player-controls-bar {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-bottom: 4px;
+}
+
+/* Общий стиль для кнопок управления */
+.player-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 35px;
+  height: 35px;
+  padding-bottom: 0;
+}
+
+/* Рамка фокуса: видна только при клавиатурной навигации, не при клике мышью */
+.player-btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Стиль для иконок внутри кнопок */
+.player-icon {
+  color: white;
+  font-size: large;
+}
+
+/* Стиль для текста внутри кнопок */
+.player-text {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* Стиль для контейнера прогрессбара видео-плеера */
+.player-progress-bar {
+  flex-grow: 1;
+  margin-left: 7px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+}
+
+/* Вся дорожка (серая подложка, фиксированная на 100% ширины контейнера) */
+.player-progress-fixed {
+  background-color: black;
+  height: 5px;
+  border-radius: 30px;
+  width: 100%;
+  position: relative;
+}
+
+/* Стиль для полоски прогрессбара видео-плеера */
+.player-progress-slider {
+  background-color: #f8104d;
+  height: 100%;
+  border-radius: 30px;
+  position: relative;
+}
+
+/* Бегунок (точка), базовое состояние */
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #f8104d;
+  opacity: 0;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-sizing: border-box;
+  display: inline-block;
+  flex-grow: 0;
+  position: absolute;
+  right: -7.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+/* Бегунок (точка), состояние при наведении курсора */
+.player-controls-bar:hover .dot {
+  opacity: 1;
+  transition-timing-function: ease-out;
+}
